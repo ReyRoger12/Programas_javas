@@ -1,0 +1,5 @@
+el siguiente programa creado en java ocupa ciertos requisitos para ejecutarse
+
+-JDK JAVA instalado Version igual a 8 o mayor
+-ABRIR UNA TERMINAL DESDE LA UBICACION DEL ARCHIVO .JAR DEL PROGRAMA 
+-EJECUTAR EL COMANDO ( JAVA -JAR SteamDiscountChecker.java ) sin parentesis
