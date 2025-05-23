@@ -1,0 +1,26 @@
+parser code {:
+    public void report_error(String message, Object info) {
+        System.err.println("Error de sintaxis en la expresión.");
+    }
+:}
+
+terminal ENTERO, FLOTANTE, OPERADOR, EXPONENTE, PARENIZQ, PARENDER;
+non terminal exp, exp_prima, termino, numero, nc, empty;
+
+start with exp;
+
+exp        ::= termino exp_prima;
+
+exp_prima  ::= OPERADOR termino exp_prima
+             | empty;
+
+termino    ::= PARENIZQ exp PARENDER
+             | numero;
+
+numero     ::= ENTERO nc
+             | FLOTANTE nc;
+
+nc         ::= EXPONENTE
+             | empty;
+
+empty      ::= ;
